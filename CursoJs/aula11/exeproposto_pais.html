@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naturalidade</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 4px;
+        }
+    </style>
+    <!--Id:
+        - natu
+        - res
+    -->
+</head>
+<body>
+    <h1>Naturalidade</h1>
+    <label for="natu">Vivendo em:
+
+    <input type="text" name="natu" id="natu">
+
+    </label>
+    
+    <input type="button" value="Verificar" onclick="verificar()">
+
+
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar(){
+            var bpais = window.document.getElementById('natu')
+            var pais = String(bpais.value)
+            var res = window.document.getElementById('res')
+            
+            if (pais == "Brasil"){
+                res.innerHTML = ('Você é Brasileiro!')
+            } else{
+                res.innerHTML = ('Você é Estrangeiro!')
+            }
+        }
+    </script>
+</body>
+</html>

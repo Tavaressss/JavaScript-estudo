@@ -1,3 +1,3 @@
-function clicou(){
-
+function b1(){
+    window.alert('Teste')
 }

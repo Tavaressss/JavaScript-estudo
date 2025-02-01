@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="Antes e Depois">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e Depois</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            padding: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Antes e Depois
+    </h1>
+    <input type="button" value="Antecessor e Sucessor" onclick="clicou()">
+
+    <script>
+        function clicou (){
+            let algo = window.prompt('Digite um número inteiro qualquer')
+            let num = Number(algo)
+            alert(`Antes de ${num}, temos o número ${--num}.
+Depois de ${++num}, temos o número ${++num}.`)
+        }
+    </script>
+</body>
+</html>

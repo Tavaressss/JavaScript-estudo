@@ -9,14 +9,20 @@
 <body>
         <h1>Desafio das Mensagens</h1>
         
-        <input class="botao" type="button" value="Botão 1" onclick="b1">
-        <input class="botao" type="button" value="Botão 2" onclick="b2">        
-        <input class="botao" type="button" value="Botão 3" onclick="b3">
+        <input class="botao" type="button" value="Botão 1" onclick="b1()">
+        <input class="botao" type="button" value="Botão 2" onclick="b2()">        
+        <input class="botao" type="button" value="Botão 3" onclick="b3()">
 
         <script>
             function b1(){
-                window.alert(`Você clicou no 1º botão!`)
+                alert('Você clicou no botão 1º!')
             }
+            function b2(){
+                alert('Você clicou no botão 2º!')
+            }
+            function b3(){
+                alert('Você clicou no botão 3º!')
+            }   
         </script>
 </body>
 </html>

@@ -20,6 +20,26 @@
     <script>
         function clicou(){
             var cels = window.prompt(`Digite um temperatura em ºC (Celsius)`)
+
+            var c = Number(cels)
+            
+            //conver. temp.
+            var f = c * 1.8 + 32 
+            var k = c + 273.15
+            
+
+            if(document.getElementById("box"))return;
+
+            let caixa = document.createElement("div");
+            caixa.id = "box";
+
+            caixa.innerHTML = `<h1>A temperatura de ${c}ºC, corresponde a...<br></h1>
+
+            <p>${k}ºK(Kelvin)</p>
+            <p>${f}ºF(Fahrenheit)</p>
+            `
+
+            document.body.appendChild(caixa);
         }
     </script>
 </body>

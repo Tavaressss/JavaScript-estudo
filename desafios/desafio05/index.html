@@ -24,12 +24,14 @@
             let m = Number.parseFloat(metros)
 
             //cria a caixa
+            
             if(document.getElementById("box"))return;
 
             let caixa = document.createElement("div");
             caixa.id = "box";
 
             //elementos da caixa
+
             caixa.innerHTML = `<h1>A distância de ${m} metros, corresponde a... </h1> <br>
             <p>${m/1000} quilômetros (km)</p> <br>
             <p>${m/100} hectômetros (Hm)</p> <br>

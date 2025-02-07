@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor R$ -> US$</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor R$ -> US$</h1>
+    <input type="button" value="Converter" onclick="clicou()">
+    <p>Clique no botão acima para iniciar</p>
+
+    <script>
+        var vdolar = window.prompt(`Antes de mais nada, quanto está a cotação do dólar agora?`)
+
+        var dolar = Number(vdolar)
+
+        function clicou(){
+            let reais = prompt(`Diga para mim, quantos R$ deseja converter?`);
+
+            let conv = reias/dolar
+            
+            if(document.getElementById("box"))return; //verifica se já tem alguma caixa criada
+
+            
+            let caixa = document.createElement("div"); //cria a caixa para os itens dinamicos
+            caixa.id = "box";
+
+            caixa.innerHTML = ` <p>Você tem o saldo de R$ ${reais},com o valor do dolar US$ ${dolar}, você terá US${conv} dolares.</p>
+            `
+
+            document.body.appendChild(caixa);
+        }
+    </script>
+</body>
+</html>

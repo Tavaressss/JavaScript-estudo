@@ -20,23 +20,23 @@
     <p>Clique no botão acima para iniciar</p>
 
     <script>
-        var vdolar = window.prompt(`Antes de mais nada, quanto está a cotação do dólar agora?`)
+        var cdolar = window.prompt(`Antes de mais nada, quanto está a cotação do dólar agora?`)
 
-        var dolar = Number(vdolar)
+        var cdol = Number(cdolar)
 
         function clicou(){
-            let reais = prompt(`Diga para mim, quantos R$ deseja converter?`);
+            let vreais = prompt(`Diga para mim, quantos R$ deseja converter?`);
 
-            let conv = reias/dolar
-            
-            if(document.getElementById("box"))return; //verifica se já tem alguma caixa criada
+            let reais = Number(vreais);
 
+           let dolar = reais/cdol
             
+            if(document.getElementById("box"))return; 
+
             let caixa = document.createElement("div"); //cria a caixa para os itens dinamicos
             caixa.id = "box";
 
-            caixa.innerHTML = ` <p>Você tem o saldo de R$ ${reais},com o valor do dolar US$ ${dolar}, você terá US${conv} dolares.</p>
-            `
+            caixa.innerHTML = `<p>O valor de RS$${reais} convertido em dolar é: US$${dolar}</p>`
 
             document.body.appendChild(caixa);
         }

@@ -36,7 +36,7 @@
             let caixa = document.createElement("div"); //cria a caixa para os itens dinamicos
             caixa.id = "box";
 
-            caixa.innerHTML = `<p>O valor de RS$${reais} convertido em dolar é: US$${dolar}</p>`
+            caixa.innerHTML = `<p>O valor de R$${reais} reais convertido em dólar é: US$${dolar.toLocaleString('en-us', {style:"currency", currency:'USA'})}</p>`
 
             document.body.appendChild(caixa);
         }

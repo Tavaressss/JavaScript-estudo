@@ -38,9 +38,9 @@
 
             caixa.innerHTML = `<h1>Calculando desconto de 10% para ${prod}</h1>
             <br>
-            <p>O preço original era R$${valor}</p>
-            <p>Você acaba de ganhar R$${desconto10} de desconto(-10%)</p>
-            <p>No fim, você vai pagar R$${total} no produto ${prod}</p>
+            <p>O preço original era ${valor.toLocaleString('pt-BR', {style:"currency", currency:'BRL'})}</p>
+            <p>Você acaba de ganhar ${desconto10.toLocaleString('pt-BR', {style:"currency", currency:'BRL'})} de desconto (-10%)</p>
+            <p>No fim, você vai pagar ${total.toLocaleString('pt-BR', {style:"currency", currency:'BRL'})} no produto ${prod}</p>
             `
 
             document.body.appendChild(caixa);

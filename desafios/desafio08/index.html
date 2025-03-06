@@ -30,9 +30,9 @@
             let desconto10 = valor*(10/100)
             let total = valor - desconto10
             
-            if(document.getElementById("box"))return;
+            if(document.getElementById("box"))return; //Fluxo de criação de caixa
 
-            let caixa = document.createElement("div"); //cria a caixa
+            let caixa = document.createElement("div");
 
             caixa.id = "box";
 
@@ -43,7 +43,7 @@
             <p>No fim, você vai pagar ${total.toLocaleString('pt-BR', {style:"currency", currency:'BRL'})} no produto ${prod}</p>
             `
 
-            document.body.appendChild(caixa);
+            document.body.appendChild(caixa); //termina a caixa
         }
     </script>
 </body>

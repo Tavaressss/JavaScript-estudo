@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajustar salário</title>
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input{
+            padding: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reajuste salarial</h1>
+    <input type="button" value="Reajustar Salário" onclick="clicou()">
+    <p>Clique no botão acima para iniciar.</p>
+
+    <script>
+        function clicou(){
+            let nome = prompt(`Qual é o nome do funcionário?`);
+        
+            let sal_at = prompt(`Qual é o salário de ${nome}?`);
+            let sal = Number(sal_at);
+        
+            let porce = prompt(`O salário de ${nome} vai ser reajustado em qual porcentagem?`);
+            let aumporc = Number(porce);
+
+            if(document.getElementById("box"))return;
+            
+            let caixa = document.createElement("div");
+            caixa.id = "box";
+
+            caixa.innerHTML = `<h1>${nome} recebeu um aumento salarial!</h1>
+            <p>O salárial atual era ${sal.toLocaleString('pt-BR', {style:"currency", currency:'BRL'})}. </p>
+            <p>Com um aumento de ${aumporc}, o salário vai aumentar $$$ no próximo mês.</p>
+            <p>E a partir daí, ${nome} vai passar a ganhar $$$</p>
+            `
+
+            document.body.appendChild(caixa);
+        }
+    </script>
+</body>
+</html>

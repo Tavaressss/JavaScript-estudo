@@ -31,6 +31,8 @@
             let porce = prompt(`O salário de ${nome} vai ser reajustado em qual porcentagem?`);
             let aumporc = Number(porce);
 
+            let aum = porce * sal / 100;
+
             if(document.getElementById("box"))return;
             
             let caixa = document.createElement("div");
@@ -38,8 +40,8 @@
 
             caixa.innerHTML = `<h1>${nome} recebeu um aumento salarial!</h1>
             <p>O salárial atual era ${sal.toLocaleString('pt-BR', {style:"currency", currency:'BRL'})}. </p>
-            <p>Com um aumento de ${aumporc}, o salário vai aumentar $$$ no próximo mês.</p>
-            <p>E a partir daí, ${nome} vai passar a ganhar $$$</p>
+            <p>Com um aumento de ${aumporc}, o salário vai aumentar ${aum} no próximo mês.</p>
+            <p>E a partir daí, ${nome} vai passar a ganhar ${aum + sal}</p>
             `
 
             document.body.appendChild(caixa);

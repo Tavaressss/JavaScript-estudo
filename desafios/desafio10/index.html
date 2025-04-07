@@ -31,7 +31,18 @@
             let valorc = prompt(`Qual é o valor de c?`);
             let c = Number(valorc);
 
-            window.alert(`${a}  ${b}  ${c}`);
+            let caixa = document.createElement("div");
+            caixa.id = "box";
+
+            caixa.innerHTML = `<h1>Resolvendo Bhaskara</h1>
+            <p>A equação atual é <strong>${a}x² + ${b}x + ${c} = 0 </strong></p>
+
+            <p>O cálculo realizado será ∆ =</p>
+
+            <p></p>
+            `
+
+            document.body.appendChild(caixa);
         }
     </script>
 </body>

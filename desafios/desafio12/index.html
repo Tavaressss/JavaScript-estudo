@@ -29,22 +29,25 @@
             let ante = Number(preçoante);
             let atu = Number(preçoatual);
             let total = atu - ante;
-            let porc = total / atu * 100;
+            let porc = (100 * atu / ante) - 100;
 
             let caixa = document.createElement("div");
             caixa.innerHTML = `<h1>Analisando os valores informados</h1>
             <p>O produto custava ${ante.toLocaleString('pt-BR', {style:"currency", currency:'BRL'})} e agora custa ${atu.toLocaleString('pt-BR', {style:"currency", currency:'BRL'})}.</p>
             `
 
-            //<p>Uma variação de ${porc} pra cima.</p> (falta introduzir variação de preço em porcentagem.)
-
+            
             if(ante < atu){
                 caixa.innerHTML += `<p>Hoje o produto está mais caro.</p>
-                <p>O preço subiu ${total.toLocaleString('pt-BR', {style:"currency" , currency:'BRL'})} em relação ao preço anterior.</p>
+                <p>O preço subiu ${total.toLocaleString('pt-BR', {style:"currency" , currency:'BRL'})} em relação ao preço anterior.
+                <p>Uma variação de ${porc} pra cima.</p>
+                    </p>
                 `
             } else{
                 caixa.innerHTML += `<p>Hoje o produto está mais barato.</p>
-                <p>O preço caiu ${total.toLocaleString('pt-BR', {style:"currency" , currency:'BRL'})} em relação ao preço anterior.</p>`
+                <p>O preço caiu ${total.toLocaleString('pt-BR', {style:"currency" , currency:'BRL'})} em relação ao preço anterior.</p>
+                `
+                
             }
             document.body.appendChild(caixa);
         }

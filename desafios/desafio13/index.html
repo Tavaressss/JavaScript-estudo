@@ -12,6 +12,24 @@
         input{
             padding: 20px;
         }
+
+        #repro{
+            background-color: rgba(231, 45, 45, 0.61);
+            color: brown;
+            font-weight: bolder;
+        }
+
+        #recu{
+            background-color: rgba(255, 166, 0, 0.137);
+            color: orange;
+            font-weight: bolder;
+        }
+
+        #apro{
+            background-color: lightgreen;
+            color: green;
+            font-weight: bolder;
+        }
     </style>
 </head>
 <body>
@@ -37,11 +55,11 @@
             document.body.appendChild(caixa);
 
             if(media <= 2.9){
-                caixa.innerHTML += `<p>Com a média abaixo de 3,0, o aluno está <mark>REPROVADO</mark>.</p>`
+                caixa.innerHTML += `<p>Com a média abaixo de 3,0, o aluno está <mark id="repro">REPROVADO</mark>.</p>`
             } else if(media >= 3 && media < 6){
-                caixa.innerHTML += `<p>Com média entre 3,0 e 6,0, o aluno está em <mark>RECUPERAÇÃO</mark>.</p>`
+                caixa.innerHTML += `<p>Com média entre 3,0 e 6,0, o aluno está em <mark id="recu">RECUPERAÇÃO</mark>.</p>`
             } else{
-                caixa.innerHTML += `<p>Com média acima de  6,0, o aluno está <mark>APROVADO</mark>.</p>`
+                caixa.innerHTML += `<p>Com média acima de  6,0, o aluno está <mark id="apro">APROVADO</mark>.</p>`
             }
         }
     </script>
